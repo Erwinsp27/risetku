@@ -1,0 +1,17 @@
+{
+  "exports": [
+    {
+      "aliases": [
+        "pemeriksa_fakta"
+      ],
+      "front_man": "pemeriksa_fakta",
+      "network": "pemeriksa_fakta",
+      "url": "pemeriksa_fakta"
+    }
+  ],
+  "imports": [],
+  "link_updates": {
+    "mode": "browser-local"
+  },
+  "protocol": "nsdeploy-link/v1"
+}

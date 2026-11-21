@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pemeriksa Fakta — RisetKita</title>
+  <meta name="description" content="Pemeriksa Fakta adalah jaringan agen kedua RisetKita: memeriksa sebuah klaim terhadap Wikipedia bahasa Indonesia. Jaringan ini bisa dipanggil situs agen lain.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../assistant.css">
+  <script type="module" src="js/peer-app.js"></script>
+  <script type="module" src="site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Pemeriksa Fakta</h1>
+    <p class="tagline">Jaringan agen pemeriksa klaim — bagian dari RisetKita.</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Periksa klaim terhadap Wikipedia</h2>
+      <p>Berikan sebuah klaim faktual, misalnya “Candi Borobudur dibangun pada abad ke-9”. Agen mencari dan membaca artikel Wikipedia bahasa Indonesia, lalu menjawab: didukung, tidak ditemukan buktinya, atau bertentangan dengan sumber — beserta tautan artikelnya.</p>
+      <p class="muted">Situs ini adalah jaringan agen kedua RisetKita. Situs agen lain bisa memanggil jaringan ini: <code>https://erwinsp27.github.io/risetku/peer/pemeriksa_fakta</code>. Situs utama: <a href="../">RisetKita</a>.</p>
+    </section>
+
+    <section id="assistant" class="assistant" aria-labelledby="assistant-heading">
+      <h2 id="assistant-heading">Tanya Pemeriksa Fakta</h2>
+      <p>Asisten pemeriksa klaim: cari di Wikipedia, bandingkan dengan klaim, beri putusan.</p>
+      <p class="assistant-note">Pesan Anda dan data halaman yang dibaca agen diteruskan ke penyedia LLM yang Anda pilih di pengaturan di bawah.</p>
+      <p id="assistant-status" role="status">Menghubungkan asisten… Jika pesan ini tetap, asisten gagal dimuat. Anda tetap bisa memakai halaman ini.</p>
+      <div id="agent-app">
+        <div data-ns-slot="header"></div>
+        <div class="assistant-panels">
+          <div data-ns-slot="chat"></div>
+          <div data-ns-slot="agents"></div>
+        </div>
+        <div data-ns-slot="settings"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Pemeriksa Fakta — bagian dari RisetKita untuk <a href="https://cognizant-agenticweb.devpost.com/">Open Agentic Web Challenge</a>. Jaringan agen: <a href="./agent-manifest.json">agent-manifest.json</a> · <a href="./pemeriksa_fakta.network.json">pemeriksa_fakta.network.json</a>.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RisetKita — Agen Riset Mini</title>
+  <meta name="description" content="RisetKita adalah situs agenik: tanyakan sebuah topik, agen mencari dan membaca Wikipedia bahasa Indonesia, lalu menyusun brief riset beserta sumbernya — semuanya berjalan di browser Anda.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assistant.css">
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>RisetKita</h1>
+    <p class="tagline">Agen riset mini yang berjalan di browser Anda.</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Tanyakan topik, dapatkan brief riset bersumber</h2>
+      <p id="facts-about"></p>
+      <p id="facts-sources"></p>
+      <ol class="steps">
+        <li><strong>Tanya</strong> — tulis topik di kolom chat asisten di bawah.</li>
+        <li><strong>Agen bekerja</strong> — agen peneliti mencari dan membaca artikel Wikipedia bahasa Indonesia.</li>
+        <li><strong>Brief tersimpan</strong> — asisten menyusun ringkasan beserta sumber, dan menyimpannya di perpustakaan Anda.</li>
+      </ol>
+      <p class="muted" id="facts-limits"></p>
+      <div class="examples" aria-label="Contoh topik">
+        <span>Coba:</span>
+        <button type="button" data-topic="Buatkan brief riset singkat tentang sejarah Jakarta.">Sejarah Jakarta</button>
+        <button type="button" data-topic="Apa itu fotosintesis? Jelaskan dengan sumber.">Fotosintesis</button>
+        <button type="button" data-topic="Buat dan simpan brief riset tentang Candi Borobudur.">Candi Borobudur</button>
+        <button type="button" data-topic="Periksa apakah benar Candi Borobudur dibangun pada abad ke-9.">Cek fakta: Borobudur</button>
+      </div>
+      <p class="muted">Jaringan agen pemeriksa fakta: <a id="peer-link" href="./peer/">Pemeriksa Fakta</a> — asisten bisa memintanya memeriksa sebuah klaim setelah Anda setuju.</p>
+    </section>
+
+    <section class="library" aria-labelledby="library-heading">
+      <h2 id="library-heading">Perpustakaan brief saya</h2>
+      <p class="muted">Brief tersimpan hanya di browser ini. Hapus kapan saja.</p>
+      <div id="brief-list"></div>
+      <div id="brief-detail" aria-live="polite"></div>
+    </section>
+
+    <section id="assistant" class="assistant" aria-labelledby="assistant-heading">
+      <h2 id="assistant-heading">Tanya RisetKita</h2>
+      <p>Asisten riset: cari di Wikipedia, susun brief, simpan, dan periksa fakta.</p>
+      <p class="assistant-note">Pesan Anda dan data halaman yang dibaca agen diteruskan ke penyedia LLM yang Anda pilih di pengaturan di bawah. Tindakan yang tidak bisa dibatalkan — seperti menghapus brief — selalu meminta persetujuan Anda dulu.</p>
+      <p id="assistant-status" role="status">Menghubungkan asisten… Jika pesan ini tetap, asisten gagal dimuat. Anda tetap bisa memakai halaman ini.</p>
+      <div id="agent-app">
+        <div data-ns-slot="header"></div>
+        <div class="assistant-panels">
+          <div data-ns-slot="chat"></div>
+          <div data-ns-slot="agents"></div>
+        </div>
+        <div data-ns-slot="settings"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>RisetKita — situs agenik terbuka untuk <a href="https://cognizant-agenticweb.devpost.com/">Open Agentic Web Challenge</a>. Jaringan agen: <a href="./agent-manifest.json">agent-manifest.json</a> · <a href="./risetku.network.json">risetku.network.json</a> · <a href="./links.json">links.json</a>. Kode sumber: <a href="https://github.com/Erwinsp27/risetku">github.com/Erwinsp27/risetku</a>.</p>
+  </footer>
+</body>
+</html>

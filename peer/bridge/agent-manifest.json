@@ -1,0 +1,11 @@
+{
+  "networks": [
+    {
+      "name": "pemeriksa_fakta"
+    }
+  ],
+  "actions": {
+    "version": 1,
+    "module": "./bridge-actions.js"
+  }
+}

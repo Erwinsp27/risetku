@@ -1,0 +1,18 @@
+{
+  "exports": [
+    {
+      "aliases": [
+        "risetku",
+        "risetku_coordinator"
+      ],
+      "front_man": "risetku_coordinator",
+      "network": "risetku",
+      "url": "risetku"
+    }
+  ],
+  "imports": [],
+  "link_updates": {
+    "mode": "browser-local"
+  },
+  "protocol": "nsdeploy-link/v1"
+}

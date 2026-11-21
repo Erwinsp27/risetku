@@ -1,0 +1,98 @@
+/* RisetKita page styles. The assistant's own styles live in assistant.css. */
+:root {
+  color-scheme: light;
+  --ink: #1a2b3c;
+  --muted: #5b6b7a;
+  --accent: #0b5fa5;
+  --accent-soft: #e6f1f9;
+  --line: #d7e0e8;
+  --danger: #b3261e;
+  --bg: #f7f9fb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+.site-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.5rem 1rem 1.25rem;
+}
+.site-header h1 { margin: 0; font-size: 1.9rem; }
+.tagline { margin: 0.25rem 0 0; opacity: 0.9; }
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+section {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+h2 { margin-top: 0; font-size: 1.25rem; }
+h3 { margin: 0.5rem 0 0.25rem; font-size: 1.05rem; }
+h4 { margin: 0.75rem 0 0.25rem; }
+
+.muted { color: var(--muted); font-size: 0.92rem; }
+
+.steps { padding-left: 1.25rem; }
+.steps li { margin: 0.35rem 0; }
+
+.examples { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.75rem; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--accent);
+  background: #fff;
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+}
+button:hover { background: var(--accent-soft); }
+button.danger { border-color: var(--danger); color: var(--danger); }
+button.danger:hover { background: #fdeaea; }
+
+.brief-item {
+  border-top: 1px solid var(--line);
+  padding: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.brief-item h3 { flex: 1 1 100%; }
+.brief-item p { flex: 1 1 auto; margin: 0; }
+
+#brief-detail {
+  border-top: 1px solid var(--line);
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+}
+#brief-detail ul { padding-left: 1.25rem; overflow-wrap: anywhere; }
+#brief-detail a { color: var(--accent); overflow-wrap: anywhere; }
+
+a { color: var(--accent); }
+
+footer {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.assistant-note { font-size: 0.92rem; color: var(--muted); }
